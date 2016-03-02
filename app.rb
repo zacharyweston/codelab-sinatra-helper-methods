@@ -7,6 +7,16 @@ class ZakWebApp < Sinatra::Base
 
   helpers do
 
+    def icon_button(icon, type, message)
+      # type default value 'default'; message default value ''
+      %(
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <button type="#{type}" class="btn btn-default btn-lg">
+          <span class="#{icon}" aria-hidden="true"></span> #{message}
+        </button>
+      )
+    end
+
     def current_year
       Time.now.year
     end

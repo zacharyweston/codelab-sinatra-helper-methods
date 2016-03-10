@@ -36,6 +36,7 @@ class ZakWebApp < Sinatra::Base
     def use_google_font(font)
       # fontName = font.gsub!(/\s/,'+')
       %(
+        <link href='https://fonts.googleapis.com/css?family=#{font}' rel='stylesheet' type='text/css'>
         <style>
           p {
             font-family: #{font}, sans-serif;

@@ -1,10 +1,9 @@
 require 'sinatra'
-
+# Top-level class documentation comment
 class ZakWebApp < Sinatra::Base
   get '/' do
     erb :home
   end
-
   helpers do
 
     def icon_button(icon, type='default', message='')
@@ -48,6 +47,5 @@ class ZakWebApp < Sinatra::Base
         <p>#{font}</p>
       )
     end
-
   end
 end

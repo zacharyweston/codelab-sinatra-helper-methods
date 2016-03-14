@@ -44,7 +44,6 @@ class ZakWebApp < Sinatra::Base
             font-family: #{font}, sans-serif;
           }
         </style>
-        <p>#{font}</p>
       )
     end
   end

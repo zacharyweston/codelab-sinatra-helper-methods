@@ -7,10 +7,9 @@ class ZakWebApp < Sinatra::Base
 
   helpers do
 
-    def icon_button(icon, type, message)
+    def icon_button(icon, type='default', message='')
       # type default value 'default'; message default value ''
       %(
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <button type="#{type}" class="btn btn-default btn-lg">
           <span class="#{icon}" aria-hidden="true"></span> #{message}
         </button>
@@ -24,15 +23,15 @@ class ZakWebApp < Sinatra::Base
     def pluralize(singular_name, count)
       if count == 1
         %(
-            <h1>
-              #{count} #{singular_name}
-            </h1>
+          <h1>
+            #{count} #{singular_name}
+          </h1>
         )
       else
         %(
-            <h1>
-              #{count} #{singular_name}'s
-            </h1>
+          <h1>
+            #{count} #{singular_name}'s
+          </h1>
         )
       end
     end
@@ -43,7 +42,7 @@ class ZakWebApp < Sinatra::Base
         <link href='https://fonts.googleapis.com/css?family=#{font}' rel='stylesheet' type='text/css'>
         <style>
           p {
-          font-family: #{font}, sans-serif;
+            font-family: #{font}, sans-serif;
           }
         </style>
         <p>#{font}</p>
